@@ -1,0 +1,29 @@
+
+<main>
+    
+    <form action="/post" method="POST">
+        <h3>Job Details</h3>
+        <div class="form-group">
+            <label for="title">Job Title:</label>
+            <input type="text" id="title" name="title" required>
+        </div>
+        <div class="form-group">
+            <label for="description">Job Description:</label>
+            <textarea id="description" name="description" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required>
+        </div>
+        <div class="form-group">
+            <label for="salary">Salary:</label>
+            <input type="text" id="salary" name="salary" required>
+        </div>
+        <!-- <div class="form-group">
+            <label for="expiration_date">Expiration Date:</label>
+            <input type="date" id="expiration_date" name="expiration_date" required>
+        </div> -->
+        <p style="color: green;">{{message}}</p>
+        <button type="submit">Submit</button>
+    </form>
+</main>

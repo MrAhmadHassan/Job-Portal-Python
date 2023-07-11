@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Careers Page</title>
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#">i2c</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="#job-listings">Job Listings</a></li>
+                <li><a href="/adminlogin">Admin</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+        <h1 style="margin-top: 10px;">Explore Opportunities at i2c</h1>
+
+    </header>
+    <div class="hero-image">
+        <img src="/static/hero.jpg" alt="Hero Image">
+    </div>
+    <main>
+        <section class="job-listings" id="job-listings">
+            <h2>Current Job Openings {{length}}</h2>
+            <ul>
+                {%for job in jobs%}
+                <li>
+                    <h3>{{job["title"]}}</h3>
+                    <p>{{job["description"]}}</p>
+                    <div class="container">
+                        <a href="#" class="button">Apply Now</a>
+                    </div>
+                </li>
+                {%endfor%}
+            </ul>
+        </section>
+        <section class="benefits">
+            <h2>Why Join Our Team?</h2>
+            <ul>
+                <li>Competitive salary</li>
+                <li>Flexible working hours</li>
+                <li>Opportunities for growth and advancement</li>
+                <li>Work-life balance</li>
+                <li>Collaborative and inclusive culture</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Your Company. All rights reserved.</p>
+    </footer>
+
+    <script src="../static/script.js"></script>
+</body>
+
+</html>
